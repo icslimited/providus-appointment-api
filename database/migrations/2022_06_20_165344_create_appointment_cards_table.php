@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('appointment_id')->constrained('appointments')->onDelete('cascade');
             $table->foreignId('card_id')->constrained('cards')->onDelete('cascade');
             $table->dateTime('timeIssued');
-            $table->dateTime('timeReturned');
+            $table->dateTime('timeReturned')->nullable();
             $table->timestamps();
         });
     }

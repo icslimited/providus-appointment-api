@@ -21,11 +21,11 @@ return new class extends Migration
             $table->string('location');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('guestName');
-            $table->string('guestEmail');
-            $table->integer('guestContact');
-            $table->string('guestOrganization');
+            $table->string('guestEmail')->nullable();
+            $table->integer('guestContact')->nullable();
+            $table->string('guestOrganization')->nullable();
             $table->text('reason');
-            $table->string('status');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

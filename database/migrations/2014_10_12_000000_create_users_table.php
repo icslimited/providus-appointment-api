@@ -23,8 +23,8 @@ return new class extends Migration
             $table->integer('contact');
             $table->string('staffId');
             $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
-            $table->string('branch');
-            $table->string('profilePicture');
+            $table->string('branch')->nullable();
+            $table->string('profilePicture')->nullable();
             $table->boolean('ableToLogin')->default(true);
             $table->rememberToken();
             $table->timestamps();
