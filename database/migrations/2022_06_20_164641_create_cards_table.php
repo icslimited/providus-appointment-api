@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->string('cardNumber');
+            $table->string('cardNumber')->unique();
             $table->string('status')->default('in');
             $table->timestamps();
         });

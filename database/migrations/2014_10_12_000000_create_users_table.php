@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('userType');
-            $table->integer('contact');
+            $table->string('contact');
             $table->string('staffId');
             $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
             $table->string('branch')->nullable();
